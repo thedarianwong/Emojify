@@ -24,27 +24,29 @@ function Title() {
   );
 }
 
-function InputBox() {
+function InputBox({ value, onChange }) {
   return (
     <Input
       className="input-box"
       type="textarea"
+      value={value}
+      onChange={onChange}
       placeholder="Enter some text to be translated..."
     />
   );
 }
 
-function OutputBox() {
+function OutputBox({ value }) {
   return (
     <Form className="output-box">
       <FormGroup>
-        <FormText>Output</FormText>
+        <FormText>{value || "Output"}</FormText>
       </FormGroup>
     </Form>
   );
 }
 
-function LanguageDropdown() {
+function LanguageDropdown({ onChange }) {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState("");
 
@@ -54,7 +56,7 @@ function LanguageDropdown() {
 
   const handleOptionClick = (option) => {
     setSelectedOption(option);
-    setDropdownOpen(true);
+    onChange(option);
   };
 
   return (
@@ -78,17 +80,17 @@ function LanguageDropdown() {
   );
 }
 
-function SubmitButton() {
+function SubmitButton({ onClick }) {
   return (
-    <Button className="submit-button" color="success">
+    <Button className="submit-button" color="success" onClick={onClick}>
       Submit
     </Button>
   );
 }
 
-function ClearButton() {
+function ClearButton({ onClick }) {
   return (
-    <Button className="clear-button" color="danger">
+    <Button className="clear-button" color="danger" onClick={onClick}>
       Clear
     </Button>
   );

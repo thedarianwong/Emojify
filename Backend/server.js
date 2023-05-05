@@ -1,9 +1,8 @@
 const express = require("express");
 const { Configuration, OpenAIApi } = require("openai");
-const axios = require("axios");
 const cors = require("cors");
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 4000;
 const prompts = require("./prompts");
 require("dotenv").config();
 
@@ -34,7 +33,7 @@ app.post("/translate", async (req, res) => {
   const { inputText, translationType } = req.body;
   let prompt;
 
-  if (translationType === "Translate to Emoji") {
+  if (translationType === "Translate to Emojis") {
     prompt = prompts.englishToEmojis + inputText;
     console.log(prompt);
   } else if (translationType === "Translate to English") {
