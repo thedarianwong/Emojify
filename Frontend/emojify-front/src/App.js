@@ -10,6 +10,8 @@ import {
   LanguageDropdown,
 } from "./Components";
 
+const url = "https://emojify-backend.onrender.com";
+
 async function handleSubmit(inputText, translationType, setOutputText) {
   // Check if there is input text
   if (!inputText) {
@@ -24,10 +26,7 @@ async function handleSubmit(inputText, translationType, setOutputText) {
   };
 
   try {
-    const response = await fetch(
-      "http://localhost:4000/translate",
-      requestOptions
-    );
+    const response = await fetch(url, requestOptions);
     const data = await response.json();
 
     if (response.ok) {
