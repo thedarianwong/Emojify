@@ -1,7 +1,7 @@
 # dependencies
 /Frontend/node_modules
 /Backend/node_modules
-/Backend/api_key.env
+/Backend/.env
 
 # build output
 /build
