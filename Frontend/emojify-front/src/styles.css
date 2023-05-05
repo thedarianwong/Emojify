@@ -1,0 +1,56 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 80vh;
+  padding: 1rem;
+}
+
+.title {
+  font-size: 5rem;
+  text-align: center;
+  font-family: cursive;
+}
+
+.input-box {
+  width: 100%;
+  height: 25vh;
+  margin-bottom: 1rem;
+  max-width: 100vh;
+  overflow-y: scroll;
+}
+
+.output-box {
+  width: 100vh;
+  height: 25vh;
+  margin-bottom: 1rem;
+}
+
+.language-dropdown {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.buttons-container {
+  display: flex;
+  width: 100vh;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 80%;
+}
+
+.submit-button {
+  margin-top: 1rem;
+  float: left;
+}
+
+.clear-button {
+  margin-top: 1rem;
+  float: right;
+}
