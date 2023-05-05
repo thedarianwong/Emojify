@@ -10,7 +10,7 @@ import {
   LanguageDropdown,
 } from "./Components";
 
-const url = "https://emojify-backend.onrender.com";
+const url = "https://emojify-backend.onrender.com/translate";
 
 async function handleSubmit(inputText, translationType, setOutputText) {
   // Check if there is input text
