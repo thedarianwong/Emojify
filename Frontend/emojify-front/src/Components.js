@@ -5,17 +5,20 @@ import {
   DropdownMenu,
   DropdownItem,
   Container,
+  Media,
   Input,
   Card,
   CardBody,
   Button,
 } from "reactstrap";
 import "./styles.css";
+import logo from "./TitleLogo.webp";
 
 function Title() {
   return (
-    <Container>
-      <h1 className="title">Emojify</h1>
+    <Container className="title-container">
+      <Media object src={logo} alt="Logo" className="logo" />
+      <h1 className="display-1">Emojify</h1>
     </Container>
   );
 }

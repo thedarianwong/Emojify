@@ -12,7 +12,9 @@ import {
 function App() {
   return (
     <div className="container">
-      <Title className="title" />
+      <div className="title-container">
+        <Title className="title" />
+      </div>
       <InputBox className="input-box" />
       <OutputBox className="output-box" />
       <LanguageDropdown className="language-dropdown" />
