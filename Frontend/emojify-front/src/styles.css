@@ -4,13 +4,13 @@
   justify-content: center;
   align-items: center;
   height: 100%;
-  width: 80vh;
+  width: 100vh;
   padding: 1rem;
 }
 
 .title-container {
   display: flex;
-  width: 100vh;
+  width: 100%;
   flex-direction: row;
   justify-content: center;
   align-items: center;
@@ -31,9 +31,12 @@
 }
 
 .output-box {
-  width: 100vh;
-  height: 25vh;
+  width: 100%;
+  max-width: 100vh;
   margin-bottom: 1rem;
+  height: 25vh;
+  border: 1px solid black;
+  padding: 6px 12px;
 }
 
 .language-dropdown {
@@ -46,11 +49,11 @@
 
 .buttons-container {
   display: flex;
-  width: 100vh;
+  width: 100%;
+  max-width: 100vh;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: 80%;
 }
 
 .submit-button {

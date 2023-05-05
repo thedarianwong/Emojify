@@ -7,8 +7,9 @@ import {
   Container,
   Media,
   Input,
-  Card,
-  CardBody,
+  Form,
+  FormGroup,
+  FormText,
   Button,
 } from "reactstrap";
 import "./styles.css";
@@ -35,9 +36,11 @@ function InputBox() {
 
 function OutputBox() {
   return (
-    <Card>
-      <CardBody className="output-box">Output goes here...</CardBody>
-    </Card>
+    <Form className="output-box">
+      <FormGroup>
+        <FormText>Output</FormText>
+      </FormGroup>
+    </Form>
   );
 }
 
